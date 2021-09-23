@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     // deklarasi komponen
-    Button btn;
+    Button btn, btn_akses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // asosiasikan dengan layout
         btn = findViewById(R.id.btn_pop);
+        btn_akses = findViewById(R.id.btn_akses_api);
+
+        btn_akses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ke_hal_akses();
+            }
+        });
 
         // aktifkan, setOnClick
         btn.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void pindah_hal_2(){
         Intent i = new Intent(this, Halaman2.class); // pindah halaman ke Halaman2
+        startActivity(i);;
+    }
+
+    public void ke_hal_akses(){
+        Intent i = new Intent(this, AksesApi.class); // pindah halaman ke Halaman2
         startActivity(i);;
     }
 }

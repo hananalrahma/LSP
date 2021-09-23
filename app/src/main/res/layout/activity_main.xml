@@ -35,10 +35,10 @@
             android:text="Ke Hal 2" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_akses_api"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Akses API" />
 
         <Button
             android:id="@+id/button3"
